@@ -9,7 +9,7 @@ export function About() {
 
            <div className="md:col-span-2 space-y-6">
               <p className="text-base text-muted-foreground leading-relaxed">
-                I'm a full-stack web developer. I work as a UI/UX Designer at Creatifi Studios, delivering enterprise-grade websites and designs to clients from around the world. I have experience in startups and agencies. I also love to build open-source SaaS applications and MVPs.
+                I'm a full-stack web developer and a UI/UX designer. I work as a UI/UX Designer at Creatifi Studios, delivering enterprise-grade websites and designs to clients from around the world. I have experience in startups and agencies. I also love to build open-source SaaS applications and MVPs.
               </p>
            </div>
         </div>

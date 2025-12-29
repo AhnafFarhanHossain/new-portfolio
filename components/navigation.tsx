@@ -20,7 +20,7 @@ export function Navigation() {
 
   return (
     <>
-      <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-background/70 backdrop-blur-md border border-border/50 rounded-full px-6 py-3 shadow-lg">
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 md:bottom-6 md:top-auto z-50 bg-background/70 backdrop-blur-md border border-border/50 rounded-full px-6 py-3 shadow-lg">
         <div className="flex items-center gap-8">
 
            {/* Desktop Navigation */}
@@ -73,7 +73,7 @@ export function Navigation() {
         )}
       </nav>
 
-      {/* Spacer removed as navbar is now at bottom */}
+      {/* Spacer removed as navbar is now at top on mobile */}
       {/* <div className="h-20" /> */}
     </>
   )

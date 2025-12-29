@@ -1,31 +1,36 @@
- import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
- import { FaXTwitter } from "react-icons/fa6";
- import { ArrowRight, MapPin } from "lucide-react"
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { ArrowRight, MapPin } from "lucide-react";
 
 export function Hero() {
   return (
     <section className="min-h-screen flex items-center pt-20 pb-20">
       <div className="max-w-6xl mx-auto px-4 w-full">
         <div className="flex flex-col items-center text-center gap-8 max-w-2xl mx-auto">
-           <div className="flex items-center gap-6 mb-4">
-             <img
-               src="/images/thailand.jpg"
-               alt="Ahnaf Farhan Hossain"
-               className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover"
-             />
-             <div className="text-left">
-               <h1 className="text-2xl md:text-4xl text-foreground leading-tight mb-2 md:mb-4 font-medium tracking-tight">Hello, I am <br /> Ahnaf Farhan Hossain</h1>
-                <p className="text-md md:text-xl text-muted-foreground font-medium">Full Stack Web Developer & Designer</p>
-                <p className="text-base text-muted-foreground flex items-center gap-2 mt-2">
-                  <MapPin size={16} />
-                  Dhaka, Bangladesh
-                </p>
-             </div>
-           </div>
+          <div className="flex items-center gap-6 mb-4">
+            <img
+              src="/images/thailand.jpg"
+              alt="Ahnaf Farhan Hossain"
+              className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover"
+            />
+            <div className="text-left">
+              <h1 className="text-2xl md:text-4xl text-foreground leading-tight mb-2 md:mb-4 font-medium tracking-tight">
+                Hello, I am <br /> Ahnaf Farhan Hossain
+              </h1>
+              <p className="text-md md:text-xl text-muted-foreground font-medium">
+                Full Stack Web Developer & Designer
+              </p>
+              <p className="text-base text-muted-foreground flex items-center gap-2 mt-2">
+                <MapPin size={16} />
+                Dhaka, Bangladesh
+              </p>
+            </div>
+          </div>
 
-           <p className="text-base text-muted-foreground leading-relaxed">
-             👋 Hello, I am Ahnaf from Bangladesh. I am 15, Student, and a Full Stack Developer. Currently, I am primarily focused on Frontend Development and UI/UX Designing, but I'd like to explore Backend Development in the future as well.
-           </p>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            👋 Hello, I am Ahnaf from Bangladesh. I am 15, Student. Currently, I am primarily focused on Frontend and UI/UX, but I'd like to explore in-depth Backend
+            Development in the future as well.
+          </p>
 
           <div className="flex gap-4 flex-wrap justify-center">
             <a
@@ -83,5 +88,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

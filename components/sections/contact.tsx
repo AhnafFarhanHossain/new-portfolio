@@ -53,17 +53,6 @@ export function Contact() {
                 </a>
               </div>
 
-              {/* Phone */}
-              <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">Phone</p>
-                <a
-                  href="tel:+8801886155446"
-                  className="text-lg text-foreground hover:text-primary transition-colors flex items-center gap-2"
-                >
-                  +880 1886 155 446
-                  <ArrowRight size={16} />
-                </a>
-              </div>
 
               {/* Location */}
               <div>
