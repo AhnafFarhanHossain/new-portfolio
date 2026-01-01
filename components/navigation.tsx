@@ -10,6 +10,22 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const { theme, setTheme } = useTheme()
 
+  const toggleTheme = () => {
+    if (!document.startViewTransition) {
+      document.body.classList.add('theme-transitioning')
+      setTheme(theme === 'light' ? 'dark' : 'light')
+      setTimeout(() => {
+        document.body.classList.remove('theme-transitioning')
+      }, 500)
+      return
+    }
+    
+    // Optional: Use View Transitions API if supported for an even cooler effect
+    document.startViewTransition(() => {
+      setTheme(theme === 'light' ? 'dark' : 'light')
+    })
+  }
+
   const navItems = [
     { href: "#about", label: "About" },
     { href: "#experience", label: "Experience" },
@@ -38,7 +54,7 @@ export function Navigation() {
 
            {/* Theme Toggle */}
            <button
-             onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+             onClick={toggleTheme}
              className="p-1.5 hover:bg-muted rounded-lg transition-colors"
              aria-label="Toggle theme"
            >
