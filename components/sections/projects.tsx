@@ -2,7 +2,7 @@
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { useEffect, useRef, useState } from "react";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import gsap from "gsap";
 
@@ -28,6 +28,7 @@ export function Projects() {
         "Cloudflare",
       ],
       link: "https://invenza.me",
+      github: "https://github.com/AhnafFarhanHossain/Invenza",
       year: 2025,
       image: "/images/projects/invenza.webp",
       category: "Dev",
@@ -48,6 +49,7 @@ export function Projects() {
         "AI-powered color palette generator from keywords. Generates beautiful color schemes based on user input using advanced AI.",
       technologies: ["Next.js", "OpenRouter AI", "React"],
       link: "https://colortailorai.vercel.app",
+      github: "https://github.com/AhnafFarhanHossain/colortailor",
       year: 2025,
       image: "/images/projects/colortailor.webp",
       category: "Dev",
@@ -76,12 +78,19 @@ export function Projects() {
       title: "Global Trade Online",
       description:
         "Built the frontend for Global Trade Online, a platform connecting buyers and sellers globally. Built the dashboard and the landing page. Go to /dashboard to view the dashboard pages.",
-      technologies: ["NextJS", "TypeScript", "TailwindCSS", "React", "ShadcnUI"],
+      technologies: [
+        "NextJS",
+        "TypeScript",
+        "TailwindCSS",
+        "React",
+        "ShadcnUI",
+      ],
       link: "https://gto-frontend.vercel.app",
+      github: "https://github.com/AhnafFarhanHossain/GTO-frontend",
       year: 2026,
       image: "/images/projects/gto.webp",
       category: "Dev",
-    }
+    },
   ];
 
   const filteredProjects =
@@ -146,8 +155,15 @@ export function Projects() {
           Projects
         </h2>
 
-        <Tabs defaultValue="all" onValueChange={setSelectedTab} className="mb-8">
-          <TabsList ref={tabsListRef} className="relative rounded-full bg-muted/50 p-1">
+        <Tabs
+          defaultValue="all"
+          onValueChange={setSelectedTab}
+          className="mb-8"
+        >
+          <TabsList
+            ref={tabsListRef}
+            className="relative rounded-full bg-muted/50 p-1"
+          >
             <div
               className="absolute h-[calc(100%-8px)] top-1 rounded-full bg-primary transition-all duration-300 ease-out shadow-sm"
               style={{
@@ -170,7 +186,10 @@ export function Projects() {
           </TabsList>
         </Tabs>
 
-        <div key={selectedTab} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          key={selectedTab}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
           {filteredProjects.map((project, idx) => (
             <div
               key={idx}
@@ -207,14 +226,26 @@ export function Projects() {
                 ))}
               </div>
 
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                View Project <ExternalLink size={16} />
-              </a>
+              <div className="flex gap-4">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  View Project <ExternalLink size={16} />
+                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    GitHub <Github size={16} />
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
