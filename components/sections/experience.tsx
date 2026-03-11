@@ -1,7 +1,7 @@
 export function Experience() {
   const experiences = [
     {
-      title: "Frontend Engineer",
+      title: "Full Stack Engineer",
       company: "caught you:3",
       period: "June 2025 - Present",
       location: "Dhaka",

@@ -28,7 +28,7 @@ export function Hero() {
           </div>
 
           <p className="text-base text-muted-foreground leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150 ease-out fill-mode-backwards">
-            👋 Hi, I'm Ahnaf! I’m a 15-year-old Full Stack Developer from
+            👋 Hi, I'm Ahnaf! I’m a Full Stack Developer from
             Bangladesh. Currently, I specialize in Frontend Development and
             UI/UX Design, with plans to expand further into Backend Development.
           </p>
