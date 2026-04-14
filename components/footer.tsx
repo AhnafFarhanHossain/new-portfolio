@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaBehance, FaDribbble } from "react-icons/fa"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -74,6 +74,24 @@ export function Footer() {
               aria-label="Twitter"
             >
               <FaTwitter size={18} />
+            </a>
+            <a
+              href="https://www.behance.net/ahnaf-farhan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Behance"
+            >
+              <FaBehance size={18} />
+            </a>
+            <a
+              href="https://dribbble.com/AhnafAsADesigner"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Dribbble"
+            >
+              <FaDribbble size={18} />
             </a>
             <a
               href="mailto:ahnaffarhanhossain@gmail.com"
