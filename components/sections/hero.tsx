@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaBehance, FaDribbble } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ArrowRight, MapPin } from "lucide-react";
 
@@ -77,6 +77,24 @@ export function Hero() {
               aria-label="X"
             >
               <FaXTwitter size={20} />
+            </a>
+            <a
+              href="https://www.behance.net/ahnaf-farhan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Behance"
+            >
+              <FaBehance size={20} />
+            </a>
+            <a
+              href="https://dribbble.com/AhnafAsADesigner"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Dribbble"
+            >
+              <FaDribbble size={20} />
             </a>
             <a
               href="mailto:ahnaffarhanhossain@gmail.com"
