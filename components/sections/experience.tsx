@@ -2,7 +2,8 @@ export function Experience() {
   const experiences = [
     {
       title: "Full Stack Engineer",
-      company: "caught you:3",
+      company: "Aribaa's Ventures Ltd.",
+      logo: "https://github.com/user-attachments/assets/d663b00c-b9c5-4cab-90fc-e75f1986d1e1",
       period: "June 2025 - Present",
       location: "Dhaka",
       description:
@@ -19,6 +20,7 @@ export function Experience() {
     {
       title: "UI/UX Designer",
       company: "Creatifi Studios",
+      logo: "https://github.com/user-attachments/assets/8f40d4cf-aae7-488d-9499-50d45ab66b3a",
       period: "October 2025 - Present",
       location: "Dhaka",
       description:
@@ -46,14 +48,17 @@ export function Experience() {
                   <h3 className="text-lg font-semibold text-foreground">
                     {exp.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {exp.company === "caught you:3" ? (
-                      <span className="blur-xs">caught you :3</span>
-                    ) : (
-                      exp.company
-                    )}{" "}
-                    • {exp.location}
-                  </p>
+                  <div className="mt-2 flex items-center gap-3">
+                    <img
+                      src={exp.logo}
+                      alt={`${exp.company} logo`}
+                      className="h-10 w-10 rounded-lg border border-border object-cover shrink-0"
+                      loading="lazy"
+                    />
+                    <p className="text-sm text-muted-foreground">
+                      {exp.company} • {exp.location}
+                    </p>
+                  </div>
                 </div>
 
                 <p className="text-sm text-muted-foreground leading-relaxed">
