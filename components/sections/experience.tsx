@@ -3,7 +3,7 @@ export function Experience() {
     {
       title: "Full Stack Engineer",
       company: "Aribaa's Ventures Ltd.",
-      logo: "https://github.com/user-attachments/assets/d663b00c-b9c5-4cab-90fc-e75f1986d1e1",
+      logo: "https://github.com/user-attachments/assets/8f40d4cf-aae7-488d-9499-50d45ab66b3a",
       period: "June 2025 - Present",
       location: "Dhaka",
       description:
@@ -20,7 +20,7 @@ export function Experience() {
     {
       title: "UI/UX Designer",
       company: "Creatifi Studios",
-      logo: "https://github.com/user-attachments/assets/8f40d4cf-aae7-488d-9499-50d45ab66b3a",
+      logo: "https://github.com/user-attachments/assets/d663b00c-b9c5-4cab-90fc-e75f1986d1e1",
       period: "October 2025 - Present",
       location: "Dhaka",
       description:
