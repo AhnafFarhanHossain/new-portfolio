@@ -1,4 +1,6 @@
 export function Experience() {
+  const fallbackLogo = "/placeholder-logo.png";
+
   const experiences = [
     {
       title: "Full Stack Engineer",
@@ -54,6 +56,9 @@ export function Experience() {
                       alt={`${exp.company} logo`}
                       className="h-10 w-10 rounded-lg border border-border object-cover shrink-0"
                       loading="lazy"
+                      onError={(event) => {
+                        event.currentTarget.src = fallbackLogo;
+                      }}
                     />
                     <p className="text-sm text-muted-foreground">
                       {exp.company} • {exp.location}
