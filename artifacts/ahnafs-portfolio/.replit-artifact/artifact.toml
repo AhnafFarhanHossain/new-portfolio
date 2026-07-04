@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Ahnaf's Portfolio"
+version = "1.0.0"
+id = "artifacts/ahnafs-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21312
+
+[services.development]
+run = "pnpm --filter @workspace/ahnafs-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ahnafs-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ahnafs-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21312"
+BASE_PATH = "/"
