@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaBehance, FaDribbble } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaDribbble } from "react-icons/fa"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold text-foreground mb-2">Ahnaf Farhan</h3>
             <p className="text-sm text-muted-foreground">
-              Full Stack Developer & Designer crafting digital experiences.
+              Full Stack Developer crafting digital experiences.
             </p>
           </div>
 
@@ -37,6 +37,14 @@ export function Footer() {
                   className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Contact
+                </a>
+                <a
+                  href="https://dribbble.com/AhnafAsADesigner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Design Portfolio ↗
                 </a>
               </div>
             </div>
@@ -74,15 +82,6 @@ export function Footer() {
               aria-label="Twitter"
             >
               <FaTwitter size={18} />
-            </a>
-            <a
-              href="https://www.behance.net/ahnaf-farhan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Behance"
-            >
-              <FaBehance size={18} />
             </a>
             <a
               href="https://dribbble.com/AhnafAsADesigner"
