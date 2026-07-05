@@ -18,7 +18,7 @@ export function Hero() {
                 Hello, I am <br /> Ahnaf Farhan Hossain
               </h1>
               <p className="text-md md:text-xl text-muted-foreground font-medium">
-                Full Stack Web Developer & Designer
+                AI Engineer & Full Stack Developer
               </p>
               <p className="text-base text-muted-foreground flex items-center gap-2 mt-2">
                 <MapPin size={16} />
@@ -28,8 +28,7 @@ export function Hero() {
           </div>
 
           <p className="text-base text-muted-foreground leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150 ease-out fill-mode-backwards">
-            👋 Hi, I'm Ahnaf! I'm a Full Stack Developer from Bangladesh. Currently, I specialize in
-            Frontend Development and UI/UX Design, with plans to expand further into Backend Development.
+            👋 Hi, I'm Ahnaf! I'm an AI Engineer and Full Stack Developer from Bangladesh. I build AI-powered applications — intelligent agents, RAG pipelines, and production-grade products using LangChain, LangGraph, and the Vercel AI SDK.
           </p>
 
           <div className="flex gap-4 flex-wrap justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 ease-out fill-mode-backwards">

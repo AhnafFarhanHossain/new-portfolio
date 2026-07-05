@@ -9,9 +9,11 @@ export function About() {
 
           <div className="md:col-span-2 space-y-6">
             <p className="text-base text-muted-foreground leading-relaxed">
-              I'm a full-stack web developer and a UI/UX designer. I work as a UI/UX Designer at Creatifi Studios,
-              delivering enterprise-grade websites and designs to clients from around the world. I have experience of
-              working in startups and agencies. I also love to build open-source SaaS applications and MVPs.
+              I'm an AI Engineer and Full Stack Developer from Bangladesh. I build AI-powered applications —
+              from intelligent agents and RAG pipelines to production-grade full-stack products. I work with
+              the modern AI stack (LangChain, LangGraph, Vercel AI SDK, Pinecone, pgvector) alongside a
+              strong foundation in React, Next.js, and Node.js. I've shipped projects in startups and agencies,
+              and I love turning complex ideas into fast, reliable software.
             </p>
           </div>
         </div>
