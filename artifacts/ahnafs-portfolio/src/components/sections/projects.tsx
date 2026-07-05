@@ -27,22 +27,6 @@ const projects = [
     year: 2025,
     image: "/images/projects/colortailor.webp",
   },
-  {
-    title: "Global Trade Online",
-    description:
-      "Built the frontend for Global Trade Online, a platform connecting buyers and sellers globally. Built the dashboard and the landing page. Go to /dashboard to view the dashboard pages.",
-    technologies: [
-      "NextJS",
-      "TypeScript",
-      "TailwindCSS",
-      "React",
-      "ShadcnUI",
-    ],
-    link: "https://gto-frontend.vercel.app",
-    github: "https://github.com/AhnafFarhanHossain/GTO-frontend",
-    year: 2026,
-    image: "/images/projects/gto.webp",
-  },
 ];
 
 export function Projects() {
