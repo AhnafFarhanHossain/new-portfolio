@@ -1,0 +1,9 @@
+{
+  "framework": null,
+  "buildCommand": "pnpm --filter @workspace/ahnafs-portfolio run build",
+  "outputDirectory": "artifacts/ahnafs-portfolio/dist/public",
+  "installCommand": "pnpm install",
+  "env": {
+    "BASE_PATH": "/"
+  }
+}
