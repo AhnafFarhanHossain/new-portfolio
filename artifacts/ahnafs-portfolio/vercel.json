@@ -1,0 +1,9 @@
+{
+  "framework": null,
+  "buildCommand": "vite build --config vite.config.ts",
+  "outputDirectory": "dist/public",
+  "installCommand": "npm install -g pnpm && pnpm install",
+  "env": {
+    "BASE_PATH": "/"
+  }
+}
