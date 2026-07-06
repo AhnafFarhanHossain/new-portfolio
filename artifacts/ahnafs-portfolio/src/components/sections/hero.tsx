@@ -33,7 +33,7 @@ export function Hero() {
 
           {/* Bio */}
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 ease-out fill-mode-backwards">
-            👋 Hi, I'm Ahnaf! I'm an AI Engineer and Full Stack Developer from Bangladesh. I build AI-powered applications — intelligent agents, RAG pipelines, and production-grade products using LangChain, LangGraph, and the Vercel AI SDK.
+            👋 Hi, I'm Ahnaf! I'm an AI Engineer and Full Stack Developer from Bangladesh. I build AI-powered applications: intelligent agents, RAG pipelines, and production-grade products using LangChain, LangGraph, and the Vercel AI SDK.
           </p>
 
           {/* CTA buttons */}
