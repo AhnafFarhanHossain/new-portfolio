@@ -7,8 +7,11 @@ import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
 import { Contact } from "@/components/sections/contact";
+import { useLenis } from "@/hooks/use-lenis";
 
 function PortfolioPage() {
+  useLenis()
+
   return (
     <>
       <Navigation />
