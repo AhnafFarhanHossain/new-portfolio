@@ -1,12 +1,9 @@
-import { useEffect, useRef, useState } from "react"
 import {
   SiNextdotjs, SiReact, SiTypescript, SiJavascript, SiTailwindcss, SiFramer,
-  SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiMysql, SiPrisma,
+  SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiPrisma,
   SiSocketdotio, SiGit, SiCloudflare, SiVercel, SiRedis, SiLangchain,
 } from "react-icons/si"
 import type { ComponentType, SVGProps } from "react"
-import { gsap, ScrollTrigger } from "@/lib/gsap"
-import { useScramble } from "@/hooks/use-scramble"
 
 function PineconeIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -21,6 +18,7 @@ function PineconeIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
 function LangGraphIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -33,6 +31,7 @@ function LangGraphIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
 function AiSdkIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -40,6 +39,7 @@ function AiSdkIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
 function BullMqIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -47,6 +47,7 @@ function BullMqIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
 function PgVectorIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -58,15 +59,18 @@ function PgVectorIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 type SkillIcon = ComponentType<{ size?: number; className?: string }> | ComponentType<SVGProps<SVGSVGElement>>
-interface Skill { name: string; icon: SkillIcon }
-interface SkillCategory { category: string; skills: Skill[] }
+
+interface Skill {
+  name: string
+  icon: SkillIcon
+}
+
+interface SkillCategory {
+  category: string
+  skills: Skill[]
+}
 
 export function Skills() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const headingRef = useRef<HTMLHeadingElement>(null)
-  const [triggered, setTriggered] = useState(false)
-  const scrambled = useScramble("Skills", triggered, 22)
-
   const skillCategories: SkillCategory[] = [
     {
       category: "Frontend",
@@ -88,7 +92,7 @@ export function Skills() {
         { name: "LangChain", icon: SiLangchain },
         { name: "LangGraph", icon: LangGraphIcon },
         { name: "Pinecone", icon: PineconeIcon },
-        { name: "pgvector", icon: SiPostgresql },
+        { name: "pgvector", icon: PgVectorIcon },
         { name: "Redis", icon: SiRedis },
         { name: "BullMQ", icon: BullMqIcon },
         { name: "MongoDB", icon: SiMongodb },
@@ -107,99 +111,24 @@ export function Skills() {
     },
   ]
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: headingRef.current,
-        start: "top 85%",
-        onEnter: () => setTriggered(true),
-      })
-
-      // Cascade each skill row in with stagger + icon spin
-      const columns = sectionRef.current?.querySelectorAll(".skill-col")
-      columns?.forEach((col, colIdx) => {
-        const items = col.querySelectorAll(".skill-item")
-        const header = col.querySelector(".skill-cat-header")
-
-        if (header) {
-          gsap.fromTo(
-            header,
-            { x: -30, opacity: 0 },
-            {
-              x: 0,
-              opacity: 1,
-              duration: 0.6,
-              ease: "power3.out",
-              scrollTrigger: { trigger: col, start: "top 85%" },
-              delay: colIdx * 0.1,
-            }
-          )
-        }
-
-        gsap.fromTo(
-          items,
-          { x: -20, opacity: 0, rotate: -5 },
-          {
-            x: 0,
-            opacity: 1,
-            rotate: 0,
-            duration: 0.5,
-            stagger: 0.06,
-            ease: "power3.out",
-            scrollTrigger: { trigger: col, start: "top 82%" },
-            delay: colIdx * 0.1 + 0.1,
-          }
-        )
-
-        // Icon spin on enter
-        const icons = col.querySelectorAll(".skill-icon")
-        gsap.fromTo(
-          icons,
-          { rotate: -180, scale: 0 },
-          {
-            rotate: 0,
-            scale: 1,
-            duration: 0.6,
-            stagger: 0.06,
-            ease: "back.out(2)",
-            scrollTrigger: { trigger: col, start: "top 82%" },
-            delay: colIdx * 0.1 + 0.1,
-          }
-        )
-      })
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
-
   return (
-    <section ref={sectionRef} id="skills" className="py-20 border-t border-border">
+    <section id="skills" className="py-20 border-t border-border">
       <div className="max-w-6xl mx-auto px-4">
-        <h2
-          ref={headingRef}
-          className="text-sm font-semibold text-foreground uppercase tracking-wide mb-12 font-mono"
-        >
-          {scrambled}
-        </h2>
+        <h2 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-12">Skills</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((cat, idx) => (
-            <div key={idx} className="skill-col space-y-4">
-              <h3 className="skill-cat-header text-base font-semibold text-foreground" style={{ opacity: 0 }}>
-                {cat.category}
-              </h3>
+            <div key={idx} className="space-y-4">
+              <h3 className="text-base font-semibold text-foreground">{cat.category}</h3>
               <div className="space-y-3">
                 {cat.skills.map((skill) => {
                   const IconComponent = skill.icon as ComponentType<{ size?: number; width?: number; height?: number; className?: string }>
                   return (
                     <div
                       key={skill.name}
-                      className="skill-item flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      style={{ opacity: 0 }}
+                      className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      <span className="skill-icon inline-flex shrink-0" style={{ display: "inline-flex" }}>
-                        <IconComponent size={16} width={16} height={16} />
-                      </span>
+                      <IconComponent size={16} width={16} height={16} className="shrink-0" />
                       {skill.name}
                     </div>
                   )
