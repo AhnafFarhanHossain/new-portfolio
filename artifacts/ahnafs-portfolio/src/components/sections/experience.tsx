@@ -40,15 +40,11 @@ export function Experience() {
       const cards = sectionRef.current?.querySelectorAll(".exp-card")
       cards?.forEach((card, i) => {
         const dir = i % 2 === 0 ? -80 : 80
+        // Set initial 3D state explicitly so ScrollTrigger can reset cleanly
+        gsap.set(card, { rotateY: i % 2 === 0 ? -12 : 12, transformPerspective: 800 })
         gsap.fromTo(
           card,
-          {
-            x: dir,
-            y: 40,
-            opacity: 0,
-            rotateY: i % 2 === 0 ? -12 : 12,
-            transformPerspective: 800,
-          },
+          { x: dir, y: 40, opacity: 0 },
           {
             x: 0,
             y: 0,
